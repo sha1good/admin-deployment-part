@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect} from "react";
+import { useState, useRef} from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { ReactComponent as ArrowIcon } from "../icons/arrow.svg";
@@ -20,9 +20,9 @@ const DropdownMenu = () => {
      dispatch(logout());
   }
 
-  useEffect(() => {
-    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
-  }, [])
+//   useEffect(() => {
+//     setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
+//   }, [])
 
   const DropdownMenuItem = (props) => {
     return (
