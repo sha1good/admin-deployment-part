@@ -41,11 +41,7 @@ export default function WidgetLg() {
             <Button type={order.status} />
           </td>
         </tr>
-       
-
-    ))}    
-        
-       
+       ))}    
       </table>
     </div>
   );

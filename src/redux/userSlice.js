@@ -61,6 +61,10 @@ const userSlice = createSlice({
       state.isFetching = false;
       state.error = true;
     },
+    logout: (state) =>{
+      state.isFetching = false;
+      state.currentUser = null;
+    }
   },
 });
 
@@ -76,6 +80,7 @@ export const {
   updateUserStart,
   deleteUserStart,
   deleteUserSuccess,
-  deleteUserFailure
+  deleteUserFailure,
+  logout
 } = userSlice.actions;
 export default userSlice.reducer;
