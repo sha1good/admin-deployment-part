@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { userRequest } from "../../requestMethods";
 import  Notification  from "../../UI/Notification";
+import { useHistory }  from "react-router-dom";
 import app from "../../firebase";
 import {
   getStorage,
@@ -23,6 +24,7 @@ export default function Product() {
   const [color, setColor] = useState([]);
   const [file, setFile] = useState(null);
   const location = useLocation();
+  const  history = useHistory();
   const [productStats, setProductStats] = useState([]);
   const [notify, setNotify] = useState({
     isOpen: false,
@@ -134,6 +136,7 @@ export default function Product() {
           };
           updateProduct(productId, product, dispatch);
           setNotify({isOpen: true, message:"Submitted Succesfully",type:"success"})
+          history.push("/product")
         });
       }
     );
