@@ -11,7 +11,7 @@ import { Person } from "@material-ui/icons";
 import { logout } from "../redux/userSlice";
 
 const DropdownMenu = () => {
-  const [activeMenu, setActiveMenu] = useState("main");
+ // const [activeMenu, setActiveMenu] = useState("main");
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
   const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const DropdownMenu = () => {
   return (
     <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
      <CSSTransition
-        in={activeMenu === 'main'}
+       // in={activeMenu === 'main'}
         timeout={500}
         classNames="menu-primary"
         unmountOnExit
@@ -64,7 +64,7 @@ const DropdownMenu = () => {
       </CSSTransition>
 
       <CSSTransition
-        in={activeMenu === 'profile'}
+        //in={activeMenu === 'profile'}
         timeout={500}
         classNames="menu-secondary"
         unmountOnExit
